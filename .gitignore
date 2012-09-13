@@ -60,8 +60,14 @@ local.properties
 *.tlh
 *.tmp
 *.vspscc
-.builds
 *.dotCover
+*.ncrunchsolution
+
+.builds
+.nuget
+_ReSharper
+NuGetPowerTools.0.29
+packages
 
 ## TODO: If you have NuGet Package Restore enabled, uncomment this
 #packages/
