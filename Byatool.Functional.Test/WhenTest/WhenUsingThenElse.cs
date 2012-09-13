@@ -14,15 +14,6 @@ namespace Byatool.Functional.Test.WhenTest
 
         #endregion
 
-        #region Test Hooks
-
-        [SetUp]
-        public void SetUp()
-        {
-        }
-
-        #endregion
-
         #region Test Methods
 
         [Test]

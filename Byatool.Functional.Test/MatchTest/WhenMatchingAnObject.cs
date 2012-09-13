@@ -61,7 +61,6 @@ namespace Byatool.Functional.Test.MatchTest
                 .Should()
                 .Be(ThirdResult);
         }
-
        
         #endregion
     }

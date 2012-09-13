@@ -8,6 +8,8 @@ namespace Byatool.Functional.Test.MatchTest
     [TestFixture]
     public class WhenMatchingOnlyAValue
     {
+        #region Fields
+        
         private const string ToTestAgainst = "toTestAgainst";
 
         private const string TheDefaultResult = "DefaultResult";
@@ -17,7 +19,9 @@ namespace Byatool.Functional.Test.MatchTest
 
         private const string ItEqualsFirstCheck = "FirstCheck";
         private const string ItEqualsSecondCheck = "SecondCheck";
-        private const string ItEqualsThirdCheck = "ThirdCheck";
+        private const string ItEqualsThirdCheck = "ThirdCheck"; 
+
+        #endregion
 
         #region Test Methods
 
