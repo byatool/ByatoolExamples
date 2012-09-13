@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Byatool.Funcational")]
+[assembly: AssemblyTitle("Byatool.Functional")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Byatool.Funcational")]
+[assembly: AssemblyProduct("Byatool.Functional")]
 [assembly: AssemblyCopyright("Copyright ©  2012")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("b2ff1dda-1dcb-4728-8075-b32783c35807")]
+[assembly: Guid("5dd435a5-f32d-4cc2-ba1b-0cf499e83df0")]
 
 // Version information for an assembly consists of the following four values:
 //
