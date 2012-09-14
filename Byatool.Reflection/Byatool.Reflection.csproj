@@ -41,6 +41,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PropertyHydration.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Byatool.Functional\Byatool.Functional.csproj">
+      <Project>{D30CCAB1-46B0-4AE5-B76A-FFCF3C700776}</Project>
+      <Name>Byatool.Functional</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Byatool.Shared\Byatool.Shared.csproj">
+      <Project>{EB746B2A-2AB0-491A-A097-A69AC57D791E}</Project>
+      <Name>Byatool.Shared</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

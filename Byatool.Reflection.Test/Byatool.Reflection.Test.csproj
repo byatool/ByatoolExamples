@@ -47,6 +47,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PropertyHydrationTest\TestClasses\NonEmptyConstructor.cs" />
+    <Compile Include="PropertyHydrationTest\TestClasses\NonEmptyConstructorParent.cs" />
+    <Compile Include="PropertyHydrationTest\TestClasses\ChildClass.cs" />
+    <Compile Include="PropertyHydrationTest\TestClasses\PropertyFilledClass.cs" />
+    <Compile Include="PropertyHydrationTest\TestClasses\SecondChildClass.cs" />
+    <Compile Include="PropertyHydrationTest\WhenHydratingAnObject.cs" />
+    <Compile Include="PropertyHydrationTest\WhenHydratingAnObjectWithAParameterlessConstructor.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Byatool.Reflection\Byatool.Reflection.csproj">
