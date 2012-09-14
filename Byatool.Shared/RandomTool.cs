@@ -156,15 +156,12 @@ namespace Byatool.Shared
 
             do
             {
-                paragraph.Append(CreateAString(CreateAnInt32(0, 20)) + " ");
-
+                paragraph
+                    .Append(CreateAString(CreateAnInt32(0, 8)))
+                    .Append(" ");
             } while (paragraph.Length < length);
 
-            if (paragraph.Length > length)
-            {
-                paragraph = paragraph.Remove(length, paragraph.Length - length - 1);
-            }
-            return paragraph.ToString();
+            return new string(paragraph.ToString().Take(length).ToArray());
         }
 
         public static string CreateASocialSecurityNumber(bool includeHyphens)

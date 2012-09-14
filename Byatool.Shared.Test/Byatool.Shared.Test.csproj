@@ -47,7 +47,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="WhenCreatingARandom.cs" />
+    <Compile Include="RandomToolTest\TestUtility.cs" />
+    <Compile Include="RandomToolTest\WhenCreatingANegativeNumber.cs" />
+    <Compile Include="RandomToolTest\WhenCreatingAParagraph.cs" />
+    <Compile Include="RandomToolTest\WhenCreatingARandom.cs" />
+    <Compile Include="RandomToolTest\CreateSocialSecurityNumberTest\WhenCreatingASocialSecurityNumberWithHyphens.cs" />
+    <Compile Include="RandomToolTest\CreateSocialSecurityNumberTest\WhenCreatingASocialSecurityNumberWithoutHyphens.cs" />
+    <Compile Include="RandomToolTest\WhenCreatingAString.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
