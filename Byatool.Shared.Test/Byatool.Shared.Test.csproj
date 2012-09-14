@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{1DFA8E0C-E29D-4196-9A5C-31E9C7EBA2AE}</ProjectGuid>
+    <ProjectGuid>{0EF4A67C-5266-43F0-A08E-B0DB28B51410}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Byatool.Reflection.Test</RootNamespace>
-    <AssemblyName>Byatool.Reflection.Test</AssemblyName>
+    <RootNamespace>Byatool.Shared.Test</RootNamespace>
+    <AssemblyName>Byatool.Shared.Test</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -47,15 +47,20 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Byatool.Reflection\Byatool.Reflection.csproj">
-      <Project>{36473D66-9ECE-46CB-8E61-39A3C52C1FD0}</Project>
-      <Name>Byatool.Reflection</Name>
-    </ProjectReference>
+    <Compile Include="WhenCreatingARandom.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Byatool.Functional\Byatool.Functional.csproj">
+      <Project>{D30CCAB1-46B0-4AE5-B76A-FFCF3C700776}</Project>
+      <Name>Byatool.Functional</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Byatool.Shared\Byatool.Shared.csproj">
+      <Project>{EB746B2A-2AB0-491A-A097-A69AC57D791E}</Project>
+      <Name>Byatool.Shared</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
