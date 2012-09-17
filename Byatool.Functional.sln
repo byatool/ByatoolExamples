@@ -13,6 +13,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Byatool.Shared", "Byatool.S
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Byatool.Shared.Test", "Byatool.Shared.Test\Byatool.Shared.Test.csproj", "{0EF4A67C-5266-43F0-A08E-B0DB28B51410}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Byatool.Nhibernate", "Byatool.Nhibernate\Byatool.Nhibernate.csproj", "{CFA01694-FFC6-4D04-B786-769CF0B62CFE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Byatool.Nhibernate.Test", "Byatool.Nhibernate.Test\Byatool.Nhibernate.Test.csproj", "{8539BE98-02EF-413D-A294-8D790AE33FC2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -43,6 +47,14 @@ Global
 		{0EF4A67C-5266-43F0-A08E-B0DB28B51410}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0EF4A67C-5266-43F0-A08E-B0DB28B51410}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0EF4A67C-5266-43F0-A08E-B0DB28B51410}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CFA01694-FFC6-4D04-B786-769CF0B62CFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFA01694-FFC6-4D04-B786-769CF0B62CFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFA01694-FFC6-4D04-B786-769CF0B62CFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFA01694-FFC6-4D04-B786-769CF0B62CFE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8539BE98-02EF-413D-A294-8D790AE33FC2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8539BE98-02EF-413D-A294-8D790AE33FC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8539BE98-02EF-413D-A294-8D790AE33FC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8539BE98-02EF-413D-A294-8D790AE33FC2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
