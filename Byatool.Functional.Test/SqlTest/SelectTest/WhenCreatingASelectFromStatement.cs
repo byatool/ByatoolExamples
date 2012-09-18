@@ -5,14 +5,9 @@ using NUnit.Framework;
 namespace Byatool.Functional.Test.SqlTest.SelectTest
 {
     [TestFixture]
-    public class WhenCreatingASelectFromStatement
+    public class WhenCreatingSelectAStatement : WhenCreatingAStatement
     {
         #region Fields
-
-        private const string FirstColumn = "column1";
-        private const string FirstColumnAlias = "ColumnOne";
-        private const string SecondColumn = "column2";
-        private const string SomeTable = "table";
 
         #endregion
 

@@ -2,6 +2,11 @@ namespace Byatool.Functional.ToSql
 {
     public static class AsExtention
     {
+        public static string And(this string statement, string statementInner)
+        {
+            return string.Format("({0} AND {1})", statement, statementInner);
+        }
+
         public static string As(this string columnName, string alias)
         {
             return columnName + " AS " + alias;
@@ -10,6 +15,28 @@ namespace Byatool.Functional.ToSql
         public static string From(this string postFix, string tableName)
         {
             return tableName + "." + postFix;
+        }
+
+        public static string In(this string columnName, string innerListClause)
+        {
+            return columnName + " IN (" + innerListClause + ")";
+        }
+
+        public static string In(this string columnName, int[] innerListClause)
+        {
+            return columnName + " IN (" + string.Join(",", innerListClause) + ")";
+        }
+
+
+        public static string IsEqualTo(this string inner, object value)
+        {
+             
+            return string.Format("{0} = {1}", inner, value);
+        }
+
+        public static string Or(this string statement, string statementInner)
+        {
+            return string.Format("({0} OR {1})", statement, statementInner);
         }
 
         public static string Top(this string inner, int count)
