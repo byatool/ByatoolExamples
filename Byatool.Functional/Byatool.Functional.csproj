@@ -43,6 +43,9 @@
     <Compile Include="GuardClause.cs" />
     <Compile Include="Match.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ToSql\AsExtention.cs" />
+    <Compile Include="ToSql\FromExtension.cs" />
+    <Compile Include="ToSql\Select.cs" />
     <Compile Include="When.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

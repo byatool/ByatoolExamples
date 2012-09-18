@@ -51,6 +51,7 @@
     <Compile Include="MatchTest\WhenMatchingAnObject.cs" />
     <Compile Include="MatchTest\WhenMatchingOnlyAValue.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SqlTest\SelectTest\WhenCreatingASelectFromStatement.cs" />
     <Compile Include="WhenTest\BaseWhenTest.cs" />
     <Compile Include="WhenTest\WhenUsingThenElse.cs" />
     <Compile Include="WhenTest\WhenUsingThenOtherwise.cs" />
