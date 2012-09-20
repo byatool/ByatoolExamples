@@ -126,7 +126,7 @@ namespace Byatool.Functional.Test.SqlTest.SelectTest
         public void ItCanContainMultipleWhereStatements()
         {
             var expectedText =
-              string.Format("WHERE ({0} =  {1} AND {2} = {3}) OR ({0} = {1} OR {4} = {5})",
+              string.Format("WHERE ({0} = {1} AND {2} = {3}) OR ({0} = {1} OR {4} = {5})",
                   FirstColumn, FirstValue, SecondColumn, SecondValue, ThirdColumn, ThirdValue);
 
             new Where()

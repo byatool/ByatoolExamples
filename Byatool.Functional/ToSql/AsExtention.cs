@@ -27,7 +27,6 @@ namespace Byatool.Functional.ToSql
             return columnName + " IN (" + string.Join(",", innerListClause) + ")";
         }
 
-
         public static string IsEqualTo(this string inner, object value)
         {
              
