@@ -2,6 +2,8 @@ namespace Byatool.Functional.ToSql
 {
     public static class AsExtention
     {
+        #region Methods
+
         public static string And(this string statement, string statementInner)
         {
             return string.Format("({0} AND {1})", statement, statementInner);
@@ -29,7 +31,7 @@ namespace Byatool.Functional.ToSql
 
         public static string IsEqualTo(this string inner, object value)
         {
-             
+
             return string.Format("{0} = {1}", inner, value);
         }
 
@@ -41,6 +43,8 @@ namespace Byatool.Functional.ToSql
         public static string Top(this string inner, int count)
         {
             return string.Format("TOP {0} {1}", count, inner);
-        }
+        } 
+
+        #endregion
     }
 }

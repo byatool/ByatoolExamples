@@ -4,10 +4,16 @@ namespace Byatool.Functional.ToSql
 {
     public class Select
     {
+        #region Constructors
+        
         public Select()
         {
             Columns = new List<string>();
-        }
+        } 
+
+        #endregion
+
+        #region Methods
 
         public virtual Select this[params string[] items]
         {
@@ -21,11 +27,17 @@ namespace Byatool.Functional.ToSql
             }
         }
 
-        public IList<string> Columns { get; protected set; }
-
         public string From(string tableName)
         {
             return "SELECT " + string.Join(", ", Columns) + " FROM " + tableName;
         }
+
+        #endregion
+
+        #region Properties
+        
+        public IList<string> Columns { get; protected set; } 
+
+        #endregion
     }
 }
