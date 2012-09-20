@@ -114,12 +114,29 @@ namespace Byatool.Functional.Test.SqlTest.SelectTest
 
             new Where()
                [
-                   FirstColumn.IsEqualTo(FirstValue).And(SecondColumn.IsEqualTo(SecondValue).Or(ThirdColumn.IsEqualTo(ThirdValue)))
+                   FirstColumn.IsEqualTo(FirstValue)
+                    .And(SecondColumn.IsEqualTo(SecondValue)
+                    .Or(ThirdColumn.IsEqualTo(ThirdValue)))
                ]
                .Should()
                .Be(expectedText);
         }
 
+        [Test]
+        public void ItCanContainMultipleWhereStatements()
+        {
+            var expectedText =
+              string.Format("WHERE ({0} =  {1} AND {2} = {3}) OR ({0} = {1} OR {4} = {5})",
+                  FirstColumn, FirstValue, SecondColumn, SecondValue, ThirdColumn, ThirdValue);
+
+            new Where()
+                [
+                    FirstColumn.IsEqualTo(FirstValue).And(SecondColumn.IsEqualTo(SecondValue)),
+                    With.Or(FirstColumn.IsEqualTo(FirstValue).Or(ThirdColumn.IsEqualTo(ThirdValue)))
+                ]
+                .Should()
+                .Be(expectedText);
+        }
 
         #endregion
     }

@@ -5,10 +5,16 @@ namespace Byatool.Functional.ToSql
 {
     public class Where
     {
+        #region Constructors
+        
         public Where()
         {
             Columns = new List<string>();
-        }
+        } 
+
+        #endregion
+
+        #region Methods
 
         public virtual string this[params string[] items]
         {
@@ -21,8 +27,14 @@ namespace Byatool.Functional.ToSql
 
                 return "WHERE " + string.Join(" ", Columns.ToArray());
             }
-        }
+        } 
 
-        public IList<string> Columns { get; protected set; }
+        #endregion
+
+        #region Properties
+        
+        public IList<string> Columns { get; protected set; } 
+
+        #endregion
     }
 }
