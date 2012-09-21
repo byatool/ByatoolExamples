@@ -7,19 +7,6 @@ namespace Byatool.Functional.Test.SqlTest.SelectTest
     [TestFixture]
     public class WhenCreatingSelectAStatement : WhenCreatingAStatement
     {
-        #region Fields
-
-        #endregion
-
-        #region Test Hooks
-
-        [SetUp]
-        public void SetUp()
-        {
-        }
-
-        #endregion
-
         #region Test Methods
 
         [Test]

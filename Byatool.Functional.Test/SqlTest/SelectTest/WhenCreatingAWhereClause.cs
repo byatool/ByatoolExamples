@@ -16,19 +16,6 @@ namespace Byatool.Functional.Test.SqlTest.SelectTest
 
         #endregion
 
-        #region Test Hooks
-
-        [SetUp]
-        public void SetUp()
-        {
-        }
-
-        #endregion
-
-        #region Support Methods
-
-        #endregion
-
         #region Test Methods
 
         [Test]

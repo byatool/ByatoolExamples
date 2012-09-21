@@ -7,18 +7,9 @@ namespace Byatool.Functional.Test.SqlTest.SelectTest
     [TestFixture]
     public class WhenGroupingColumns : WhenCreatingAStatement
     {
-        private const string FirstTable = "FirstTable";
-
         #region Fields
 
-        #endregion
-
-        #region Test Hooks
-
-        [SetUp]
-        public void SetUp()
-        {
-        }
+        private const string FirstTable = "FirstTable";
 
         #endregion
 
