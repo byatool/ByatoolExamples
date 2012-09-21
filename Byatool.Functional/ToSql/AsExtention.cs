@@ -9,6 +9,11 @@ namespace Byatool.Functional.ToSql
             return string.Format("({0} AND {1})", statement, statementInner);
         }
 
+        public static string AndOn(this string statement, string statementInner)
+        {
+            return string.Format("{0} AND ({1})", statement, statementInner);
+        }
+
         public static string As(this string columnName, string alias)
         {
             return columnName + " AS " + alias;
@@ -34,6 +39,16 @@ namespace Byatool.Functional.ToSql
 
             return string.Format("{0} = {1}", inner, value);
         }
+
+        public static string Matches(this string inner, string toMatch)
+        {
+            return string.Format("{0} = ({1})", inner, toMatch);
+        }
+
+        public static string On(this string inner, string condition)
+        {
+            return string.Format("{0} ON ({1})", inner, condition);
+        } 
 
         public static string Or(this string statement, string statementInner)
         {

@@ -37,6 +37,16 @@ namespace Byatool.Functional.Test.SqlTest.AsExtensionTest
         }
 
         [Test]
+        public void AndItIsAndOnTheCreatedTextIsCorrect()
+        {
+            Firstcolumn
+                .On(SecondColumn)
+                .AndOn("sda")
+                .Should()
+                .Be(string.Format("{0} ON ({1}) AND (sda)", Firstcolumn, SecondColumn));
+        }
+
+        [Test]
         public void AndItIsAsTheCreatedTextIsCorrect()
         {
             Firstcolumn
@@ -61,6 +71,24 @@ namespace Byatool.Functional.Test.SqlTest.AsExtensionTest
                 .IsEqualTo(SecondColumn)
                 .Should()
                 .Be(string.Format("{0} = {1}", Firstcolumn, SecondColumn));
+        }
+
+        [Test]
+        public void AndItIsMatchesTheCreatedTextIsCorrect()
+        {
+            Firstcolumn
+                .Matches(SecondColumn)
+                .Should()
+                .Be(string.Format("{0} = ({1})", Firstcolumn, SecondColumn));
+        }
+
+        [Test]
+        public void AndItIsOnTheCreatedTextIsCorrect()
+        {
+            Firstcolumn
+                .On(SecondColumn)
+                .Should()
+                .Be(string.Format("{0} ON ({1})", Firstcolumn, SecondColumn));
         }
 
         [Test]
