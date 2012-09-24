@@ -61,6 +61,7 @@
     <Compile Include="WhenTest\BaseWhenTest.cs" />
     <Compile Include="WhenTest\WhenUsingThenElse.cs" />
     <Compile Include="WhenTest\WhenUsingThenOtherwise.cs" />
+    <Compile Include="XmlTest\WhenCreatingSimpleXml.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
