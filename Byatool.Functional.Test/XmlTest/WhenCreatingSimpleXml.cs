@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using Byatool.Functional.ToXml;
 using NUnit.Framework;
@@ -13,7 +14,7 @@ namespace Byatool.Functional.Test.XmlTest
 
         private const string EmptyElement = "<{0} />";
         private const string FirstElement = "FirstElement";
-        private const string FirstText = "hihi";
+        private const string FirstValue = "FirstValue";
         private const string SecondElement = "SecondElement";
         private const string SecondValue = "SecondValue";
         private const string SimpleElementText = "<{0}>{1}</{0}>";
@@ -25,21 +26,42 @@ namespace Byatool.Functional.Test.XmlTest
         #region Test Methods
 
         [Test]
-        public void ASingleElementIsPossible()
-        {
-            new Element(FirstElement, FirstText)
-                .Create()
-                .Should()
-                .Be(string.Format(SimpleElementText, FirstElement,  FirstText));
-        }
-
-        [Test]
         public void NoValueIsRepresentedCorrectly()
         {
             new Element(FirstElement)
-              .Create()
+                .Create()
                 .Should()
                 .Be(string.Format(EmptyElement, FirstElement));
+        }
+
+        [Test]
+        public void ASingleElementIsPossible()
+        {
+            new Element(FirstElement, FirstValue)
+                .Create()
+                .Should()
+                .Be(string.Format(SimpleElementText, FirstElement,  FirstValue));
+        }
+
+        [Test]
+        public void AndTheValueIsNotAStringItStillWorks()
+        {
+            const int value = 123;
+            new Element(FirstElement, value)
+               .Create()
+               .Should()
+               .Be(string.Format(SimpleElementText, FirstElement, value.ToString()));
+        }
+
+        [Test]
+        public void AnAttributeListIsRepresentedCorrectly()
+        {
+            const string expectedText = "<FirstElement SecondElement=\"SecondValue\" ThirdElement=\"ThirdValue\">FirstValue</FirstElement>";
+
+            new Element(FirstElement, FirstValue, new[] {new XmlAttribute(SecondElement, SecondValue), new XmlAttribute(ThirdElement, ThirdValue), })
+                .Create()
+                .Should()
+                .Be(expectedText);
         }
 
         [Test]
