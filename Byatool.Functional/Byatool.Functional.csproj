@@ -50,6 +50,8 @@
     <Compile Include="ToSql\Where.cs" />
     <Compile Include="ToSql\With.cs" />
     <Compile Include="ToXml\Element.cs" />
+    <Compile Include="ToXml\IElement.cs" />
+    <Compile Include="ToXml\XmlAttribute.cs" />
     <Compile Include="When.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

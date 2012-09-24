@@ -5,36 +5,22 @@ using System.Text;
 
 namespace Byatool.Functional.ToXml
 {
-    public class XmlAttribute
-    {
-        public string Name;
-        public object Value;
-
-        public XmlAttribute(string name, object value)
-        {
-            Name = name;
-            Value = value;
-        }
-    }
-
-    public class Element
+    public class Element : IElement
     {
         #region Fields
 
-        private IEnumerable<XmlAttribute> _attributes;
         private readonly string _name;
         private readonly string _value;
 
-        private IList<Element> _elements;
+        private IList<IElement> _elements;
 
         #endregion
 
         #region Constructors
 
-        public Element(string name, object value = null, IEnumerable<XmlAttribute> attributes = null)
+        public Element(string name, object value = null)
         {
             _name = name;
-            _attributes = attributes;
             _value = value == null ? null : value.ToString();
         }
         
@@ -42,10 +28,11 @@ namespace Byatool.Functional.ToXml
 
         #region Support Methods
         
-        private string CreateElementText(IEnumerable<Element> elements)
+        private string CreateElementText(IEnumerable<IElement> elements)
         {
             return
                 elements
+                    .Where(item => item is Element)
                     .Select(item => item.Create())
                     .Aggregate(new StringBuilder(), (builder, text) => builder.AppendLine(text))
                     .ToString();
@@ -53,7 +40,7 @@ namespace Byatool.Functional.ToXml
 
         private string CreateThisElement(string name, string value)
         {
-            var attributes = CompressTheAttributes(Attributes);
+            var attributes = CompressTheAttributes(Elements.Where(item => item is XmlAttribute));
 
             return
                 When<string>
@@ -67,14 +54,14 @@ namespace Byatool.Functional.ToXml
                     );
         } 
 
-        private string CompressTheAttributes(IEnumerable<XmlAttribute> attributes)
+        private string CompressTheAttributes(IEnumerable<IElement> attributes)
         {
             return
                 When<string>
                     .True(attributes.Any())
                     .Then(() =>
                         attributes
-                        .Aggregate(new StringBuilder(), (builder, item) => builder.Append(" " + item.Name + "=\"" + item.Value + "\""))
+                        .Aggregate(new StringBuilder(), (builder, item) => builder.Append(item.Create()))
                         .ToString())
                     .Else(() => string.Empty);
         }
@@ -83,7 +70,7 @@ namespace Byatool.Functional.ToXml
 
         #region Methods
 
-        public virtual Element this[params Element[] items]
+        public virtual Element this[params IElement[] items]
         {
             get
             {
@@ -105,14 +92,9 @@ namespace Byatool.Functional.ToXml
         
         #region Properties
 
-        private IList<Element> Elements
+        private IList<IElement> Elements
         {
-            get { return _elements ?? (_elements = new List<Element>()); }
-        }
-
-        private IEnumerable<XmlAttribute> Attributes
-        {
-            get { return _attributes ?? (_attributes = new List<XmlAttribute>()); }
+            get { return _elements ?? (_elements = new List<IElement>()); }
         }
 
         #endregion

@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Text;
 using Byatool.Functional.ToXml;
 using NUnit.Framework;
 using FluentAssertions;
@@ -53,16 +51,6 @@ namespace Byatool.Functional.Test.XmlTest
                .Be(string.Format(SimpleElementText, FirstElement, value.ToString()));
         }
 
-        [Test]
-        public void AnAttributeListIsRepresentedCorrectly()
-        {
-            const string expectedText = "<FirstElement SecondElement=\"SecondValue\" ThirdElement=\"ThirdValue\">FirstValue</FirstElement>";
-
-            new Element(FirstElement, FirstValue, new[] {new XmlAttribute(SecondElement, SecondValue), new XmlAttribute(ThirdElement, ThirdValue), })
-                .Create()
-                .Should()
-                .Be(expectedText);
-        }
 
         [Test]
         public void AnElementCanHoldOtherElements()
@@ -102,6 +90,21 @@ namespace Byatool.Functional.Test.XmlTest
                 .Create()
                 .Should()
                 .Be(outer);
+        }
+
+        [Test]
+        public void AnAttributeListIsRepresentedCorrectly()
+        {
+            const string expectedText = "<FirstElement ThirdElement=\"ThirdValue\"><SecondElement>SecondValue</SecondElement>\r\n</FirstElement>";
+
+            new Element(FirstElement)
+                [
+                    new Element(SecondElement, SecondValue),
+                    new XmlAttribute(ThirdElement, ThirdValue)
+                ]
+                .Create()
+                .Should()
+                .Be(expectedText);
         }
 
         #endregion
