@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="LinqExamplesTest\MoreAdvancedTest\WhenCombiningTwoListUnevenly.cs" />
     <Compile Include="MatchTest\TestClasses\BabyYay.cs" />
     <Compile Include="MatchTest\TestClasses\Yay.cs" />
     <Compile Include="MatchTest\WhenMatchingAnObject.cs" />

@@ -1,4 +1,6 @@
-﻿using System.Text;
+﻿using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 using Byatool.Functional.ToXml;
 using NUnit.Framework;
 using FluentAssertions;
@@ -91,6 +93,7 @@ namespace Byatool.Functional.Test.XmlTest
                 .Should()
                 .Be(outer);
         }
+
 
         [Test]
         public void AnAttributeListIsRepresentedCorrectly()
