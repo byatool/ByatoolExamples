@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace Byatool.Functional.ToSql
+namespace Byatool.Functional.ToSql.Select
 {
     public class Select
     {

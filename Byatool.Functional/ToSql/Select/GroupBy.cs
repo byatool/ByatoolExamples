@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Byatool.Functional.ToSql
+namespace Byatool.Functional.ToSql.Select
 {
     public class GroupBy
     {

@@ -44,18 +44,27 @@
     <Compile Include="LinqExamples\MoreAdvanced.cs" />
     <Compile Include="Match.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ToSql\AsExtention.cs" />
-    <Compile Include="ToSql\GroupBy.cs" />
-    <Compile Include="ToSql\InnerJoin.cs" />
-    <Compile Include="ToSql\Select.cs" />
-    <Compile Include="ToSql\Where.cs" />
-    <Compile Include="ToSql\With.cs" />
+    <Compile Include="ToSql\Persist\Element\ColumnItem.cs" />
+    <Compile Include="ToSql\Persist\Operation\Delete.cs" />
+    <Compile Include="ToSql\Persist\Operation\Insert.cs" />
+    <Compile Include="ToSql\Persist\Operation\Update.cs" />
+    <Compile Include="ToSql\Persist\Section\Also.cs" />
+    <Compile Include="ToSql\Persist\Section\Where.cs" />
+    <Compile Include="ToSql\Persist\SqlStatementExtensions.cs" />
+    <Compile Include="ToSql\Select\AsExtention.cs" />
+    <Compile Include="ToSql\Select\GroupBy.cs" />
+    <Compile Include="ToSql\Select\InnerJoin.cs" />
+    <Compile Include="ToSql\Select\Select.cs" />
+    <Compile Include="ToSql\Select\Where.cs" />
+    <Compile Include="ToSql\Select\With.cs" />
     <Compile Include="ToXml\Element.cs" />
     <Compile Include="ToXml\IElement.cs" />
     <Compile Include="ToXml\XmlAttribute.cs" />
     <Compile Include="When.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

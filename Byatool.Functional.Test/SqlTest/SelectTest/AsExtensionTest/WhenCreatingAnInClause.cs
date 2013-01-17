@@ -1,8 +1,8 @@
-﻿using Byatool.Functional.ToSql;
+﻿using Byatool.Functional.ToSql.Select;
 using NUnit.Framework;
 using FluentAssertions;
 
-namespace Byatool.Functional.Test.SqlTest.AsExtensionTest
+namespace Byatool.Functional.Test.SqlTest.SelectTest.AsExtensionTest
 {
     [TestFixture]
     public class WhenCreatingAnInClause

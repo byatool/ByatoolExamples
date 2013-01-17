@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Byatool.Functional.ToSql
+namespace Byatool.Functional.ToSql.Select
 {
     public class InnerJoin
     {

@@ -1,4 +1,5 @@
 ﻿using Byatool.Functional.ToSql;
+using Byatool.Functional.ToSql.Select;
 using NUnit.Framework;
 using FluentAssertions;
 
