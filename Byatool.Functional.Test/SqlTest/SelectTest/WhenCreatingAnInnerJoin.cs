@@ -27,7 +27,6 @@ namespace Byatool.Functional.Test.SqlTest.SelectTest
                 ]
                 .Should()
                 .Be(string.Format(expectedText, FirstTable, FirstColumn, SecondColumn));
-
         }
 
         [Test]

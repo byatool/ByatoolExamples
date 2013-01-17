@@ -15,10 +15,10 @@ namespace Byatool.Functional.LinqExamples
          */
         public static IList<string> CombineTwoListsUnevenly(IList<string> firstList, IList<string> secondList )
         {
-            return 
-                 firstList
+            return
+                firstList
                     .Select(first => secondList.Select(second => first + " " + second))
-                    .Aggregate(new List<string>(), (endList, currentList) => endList.Union(currentList).ToList())
+                    .Aggregate(new List<string>(), (endList, currentList) => endList.Union(currentList).ToList());
         }
     }
 }

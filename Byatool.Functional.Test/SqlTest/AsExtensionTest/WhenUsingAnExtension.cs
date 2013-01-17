@@ -1,5 +1,4 @@
-﻿using System.Linq;
-using Byatool.Functional.ToSql;
+﻿using Byatool.Functional.ToSql;
 using NUnit.Framework;
 using FluentAssertions;
 
@@ -53,6 +52,15 @@ namespace Byatool.Functional.Test.SqlTest.AsExtensionTest
                 .As(SecondColumn)
                 .Should()
                 .Be(string.Format("{0} AS {1}", Firstcolumn, SecondColumn));
+        }
+
+        [Test]
+        public void AndItIsCountTheCreatedTextIsCorrect()
+        {
+            Firstcolumn
+                .CountOnly()
+                .Should()
+                .Be(string.Format(" count({0}) ", Firstcolumn));
         }
 
         [Test]

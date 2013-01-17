@@ -19,6 +19,11 @@ namespace Byatool.Functional.ToSql
             return columnName + " AS " + alias;
         }
 
+        public static string CountOnly(this string columnName)
+        {
+            return string.Format(" count({0}) ", columnName);
+        }
+
         public static string From(this string postFix, string tableName)
         {
             return tableName + "." + postFix;
