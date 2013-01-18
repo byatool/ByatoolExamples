@@ -31,33 +31,33 @@ DELETE
 
 SELECT
 
-  new Select()
-    [
-        FirstColumn.Top(10).As(FirstColumnAlias),
-        SecondColumn.From(SomeTable).As(FirstColumnAlias),
-
-    ]
-    .From(SomeTable.As(tableAlias))
+    new Select()
+      [
+          FirstColumn.Top(10).As(FirstColumnAlias),
+          SecondColumn.From(SomeTable).As(FirstColumnAlias),
+      ]
+      .From(SomeTable.As(tableAlias))
 
 
 INNER JOIN
 
-  var innerSelect = new Select(
-    [
-        SecondColumn.Top(1)
-    ].From(SecondTable);
+    var innerSelect = new Select(
+     [
+          SecondColumn.Top(1)
+     ]
+     .From(SecondTable);
 
-  new InnerJoin()
-    [
-        FirstTable.On(FirstColumn.IsEqualTo(SecondColumn)).AndOn(SecondColumn.IsEqualTo(FirstColumn)),
-        FirstTable.On(FirstColumn.Matches(innerSelect)),
-        SecondTable.On(SecondColumn.IsEqualTo(FirstColumn))
-    ]
+    new InnerJoin()
+     [
+         FirstTable.On(FirstColumn.IsEqualTo(SecondColumn)).AndOn(SecondColumn.IsEqualTo(FirstColumn)),
+         FirstTable.On(FirstColumn.Matches(innerSelect)),
+         SecondTable.On(SecondColumn.IsEqualTo(FirstColumn))
+     ]
 
 
 WHERE
 
-  new Where()
+    new Where()
      [
          FirstColumn.IsEqualTo(FirstValue).And(SecondColumn.IsEqualTo(SecondValue).Or(ThirdColumn.IsEqualTo(ThirdValue))),
          With.Or(FirstColumn.IsEqualTo(FirstValue).Or(ThirdColumn.IsEqualTo(ThirdValue)))
@@ -66,8 +66,8 @@ WHERE
 
 GROUP BY
 
-  new GroupBy()
-      [
-          FirstColumn,
-          SecondColumn.From(FirstTable)
-      ]
+    new GroupBy()
+     [
+         FirstColumn,
+         SecondColumn.From(FirstTable)
+     ]
